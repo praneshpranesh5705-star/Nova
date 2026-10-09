@@ -1,6 +1,7 @@
 -- NOVA HUB foundation schema
 -- Run this in the Supabase SQL Editor after creating your project.
 create extension if not exists pgcrypto;
+create extension if not exists vector;
 
 create table if not exists public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
